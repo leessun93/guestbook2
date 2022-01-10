@@ -33,7 +33,7 @@ public class GuestbookController extends HttpServlet {
 		
 		//액션이 add, addList, delete, deleteForm일떄로 나눌거고 
 		if("add".equals(act)) {
-			
+		
 		
 			
 			//파라미터값 가져오기
@@ -45,7 +45,9 @@ public class GuestbookController extends HttpServlet {
 			
 			guestbookDao.Insert(guestbookvo);
 			
-			response.sendRedirect("/gbc?action=addList");
+			
+			
+			response.sendRedirect("/guestbook2/gbc?action=addList");
 			
 		}else if("addList".equals(act)) {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/addList.jsp");
@@ -68,7 +70,7 @@ public class GuestbookController extends HttpServlet {
 
 			guestbookDao.Delete(guestbookvo);
 	
-			response.sendRedirect("gbc?action=addList");
+			response.sendRedirect("/guestbook2/gbc?action=addList");
 			
 		}else if("deleteForm".equals(act)) {
 	
