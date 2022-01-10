@@ -37,7 +37,7 @@
 			<button type= "submit">글작성</button>
 			</td>
 			<td>
-			<input type="text" name="action" value="add">
+			<input type="hidden" name="action" value="add">
 			</td>
 		</tr>
 	</table>
@@ -52,7 +52,7 @@ for(int i=0; i<guestbookList.size(); i++){
 				<td><%=guestbookList.get(i).getNo() %></td>
 				<td><%=guestbookList.get(i).getName()%></td>
 				<td><%=guestbookList.get(i).getReg_date() %></td>
-				<td><a href="WEB-INF/deleteForm.jsp?id=<%=guestbookList.get(i).getNo()%>">삭제</a></td>
+				<td><a href="/guestbook2/gbc?action=deleteForm&id=<%=guestbookList.get(i).getNo()%>">삭제</a></td>
 			</tr>
 			<tr>
 				<td colspan = "4"><br>
